@@ -1,0 +1,55 @@
+version: 2
+
+jobs:
+  setup:
+    docker:
+      - image: circleci/node:8.10.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - breeze-predictor-dependencies-{{ checksum "package.json" }}
+            - breeze-predictor-dependencies-
+      - run:
+          command: npm i
+          name: Install dependencies
+      - save_cache:
+          key: breeze-predictor-dependencies-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          command: npm run lint
+          name: Lint code
+
+  unit-test:
+    docker:
+      - image: circleci/node:8.10.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - breeze-predictor-dependencies-{{ checksum "package.json" }}
+            - breeze-predictor-dependencies-
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          command: npm run test:ci
+          name: Unit test
+
+  build:
+    docker:
+      - image: circleci/node:8.10.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - breeze-predictor-dependencies-{{ checksum "package.json" }}
+            - breeze-predictor-dependencies-
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          command: npm run build
+          name: Build

@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import AppHistory from './App.history';
 import AppStore from './App.store';
 
-function App (): FunctionComponentElement<unknown> {
+function App (): FunctionComponentElement<null> {
   return (
     <Provider store={AppStore}>
       <ConnectedRouter history={AppHistory}>
