@@ -1,5 +1,13 @@
 $enable-rounded: false;
 
+$indigo: #38003c;
+
+$primary: $indigo;
+
+$body-bg: $indigo;
+
+$headings-color: $indigo;
+
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
