@@ -1,0 +1,6 @@
+{
+  "name": "PageTitle",
+  "main": "./PageTitle.tsx",
+  "version": "0.0.0",
+  "private": true
+}

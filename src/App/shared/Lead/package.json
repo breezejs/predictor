@@ -1,0 +1,6 @@
+{
+  "name": "Lead",
+  "main": "./Lead.tsx",
+  "version": "0.0.0",
+  "private": true
+}

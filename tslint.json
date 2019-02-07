@@ -54,6 +54,7 @@
       true,
       "always"
     ],
+    "strict-boolean-expressions": false,
     "variable-name": [
       true,
       "ban-keywords",

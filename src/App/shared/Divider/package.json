@@ -1,0 +1,6 @@
+{
+  "name": "Divider",
+  "main": "./Divider.tsx",
+  "version": "0.0.0",
+  "private": true
+}
