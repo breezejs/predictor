@@ -1,0 +1,6 @@
+{
+  "name": "App",
+  "main": "./App.tsx",
+  "version": "0.0.0",
+  "private": true
+}
