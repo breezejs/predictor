@@ -1,0 +1,6 @@
+{
+  "name": "Hamburger",
+  "main": "./Hamburger.tsx",
+  "version": "0.0.0",
+  "private": true
+}
