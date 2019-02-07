@@ -53,3 +53,16 @@ jobs:
       - run:
           command: npm run build
           name: Build
+
+workflows:
+  version: 2
+
+  test-and-build:
+    jobs:
+      - setup
+      - unit-test:
+          requires:
+            - setup
+      - build:
+          requires:
+            - unit-test
