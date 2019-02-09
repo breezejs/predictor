@@ -1,0 +1,6 @@
+{
+  "name": "Backdrop",
+  "main": "./Backdrop.tsx",
+  "version": "0.0.0",
+  "private": true
+}
