@@ -9,15 +9,17 @@ import Toolbar from './shared/Toolbar';
 
 function App (): FunctionComponentElement<null> {
   return (
-    <Provider store={AppStore}>
-      <ConnectedRouter history={AppHistory}>
-        <Page>
-          <Toolbar theme='primary' title='BreezeJS' />
+    <React.Fragment>
+      <Toolbar theme='primary' title='BreezeJS' />
 
-          <PageTitle title='Hello world' lead='This is where we build UIs' />
-        </Page>
-      </ConnectedRouter>
-    </Provider>
+      <Provider store={AppStore}>
+        <ConnectedRouter history={AppHistory}>
+          <Page>
+            <PageTitle title='Hello world' lead='This is where we build UIs' />
+          </Page>
+        </ConnectedRouter>
+      </Provider>
+    </React.Fragment>
   );
 }
 
