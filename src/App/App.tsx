@@ -5,12 +5,15 @@ import AppHistory from './App.history';
 import AppStore from './App.store';
 import Page from './shared/Page';
 import PageTitle from './shared/PageTitle';
+import Toolbar from './shared/Toolbar';
 
 function App (): FunctionComponentElement<null> {
   return (
     <Provider store={AppStore}>
       <ConnectedRouter history={AppHistory}>
         <Page>
+          <Toolbar theme='primary' title='BreezeJS' />
+
           <PageTitle title='Hello world' lead='This is where we build UIs' />
         </Page>
       </ConnectedRouter>

@@ -1,10 +1,6 @@
-import React, {FunctionComponentElement, memo} from 'react';
-import IDividerProps from './Divider.props';
+import {memo} from 'react';
+import styled, {StyledComponent} from 'styled-components';
 
-function Divider ({className}: IDividerProps): FunctionComponentElement<IDividerProps> {
-  return (
-    <hr className={className} />
-  );
-}
+const Divider: StyledComponent<'hr', object> = styled.hr``;
 
 export default memo(Divider);

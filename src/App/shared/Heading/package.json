@@ -1,0 +1,6 @@
+{
+  "name": "Heading",
+  "main": "./Heading.tsx",
+  "version": "0.0.0",
+  "private": true
+}

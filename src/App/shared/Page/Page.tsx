@@ -1,15 +1,18 @@
 import React, {FunctionComponentElement, memo} from 'react';
-import {stylesUtility} from '../Styles';
+import styled, {StyledComponent} from 'styled-components';
 import IPageProps from './Page.props';
-import './Page.scss';
+
+const Wrapper: StyledComponent<'div', object> = styled.div`
+  background-color: #ffff;
+`;
+
+const Main: StyledComponent<'main', object> = styled.main``;
 
 function Page ({children, className}: IPageProps): FunctionComponentElement<IPageProps> {
   return (
-    <div className='page'>
-      <main className={stylesUtility('container-fluid', className)}>
-        {children}
-      </main>
-    </div>
+    <Wrapper>
+      <Main className={className}>{children}</Main>
+    </Wrapper>
   );
 }
 

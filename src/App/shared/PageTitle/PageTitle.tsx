@@ -1,24 +1,36 @@
 import React, {FunctionComponentElement, memo} from 'react';
+import styled, {StyledComponent} from 'styled-components';
 import Divider from '../Divider';
+import Heading from '../Heading';
 import Lead from '../Lead';
-import Title from '../Title';
-import IPageTitleProps from './PageTitle.props';
-import './PageTitle.scss';
+import IPageProps from './PageTitle.props';
 
-function PageTitle ({lead, title}: IPageTitleProps): FunctionComponentElement<IPageTitleProps> {
+const Header: StyledComponent<'header', object> = styled.header`
+  padding: 1.5rem 0;
+`;
+
+const SubTitle: StyledComponent<typeof Lead, object> = styled(Lead)`
+  margin: 0;
+`;
+
+const Title: StyledComponent<typeof Heading, object> = styled(Heading)`
+  margin: 0;
+`;
+
+function PageTitle ({lead, title}: IPageProps): FunctionComponentElement<IPageProps> {
   return (
-    <header className='page-title'>
-      <Title className='page-title__title' text={title} />
+    <Header>
+      <Title level='h1' text={title} />
 
       {
         lead &&
-        <React.Fragment>
-          <Divider className='page-title__hr' />
+          <React.Fragment>
+            <Divider />
 
-          <Lead className='page-title__lead' text={lead} />
-        </React.Fragment>
+            <SubTitle text={lead} />
+          </React.Fragment>
       }
-    </header>
+    </Header>
   );
 }
 
