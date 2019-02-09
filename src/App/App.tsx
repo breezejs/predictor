@@ -3,6 +3,7 @@ import React, {FunctionComponentElement, memo} from 'react';
 import {Provider} from 'react-redux';
 import AppHistory from './App.history';
 import AppStore from './App.store';
+import Footer from './shared/Footer';
 import Page from './shared/Page';
 import PageTitle from './shared/PageTitle';
 import Toolbar from './shared/Toolbar';
@@ -19,6 +20,8 @@ function App (): FunctionComponentElement<null> {
           </Page>
         </ConnectedRouter>
       </Provider>
+
+      <Footer name='BreezeJS' />
     </React.Fragment>
   );
 }
