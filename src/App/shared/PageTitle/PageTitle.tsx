@@ -9,6 +9,10 @@ const Header: StyledComponent<'header', object> = styled.header`
   padding: 1.5rem 0;
 `;
 
+const Hr: StyledComponent<typeof Divider, object> = styled(Divider)`
+  margin: .5rem 0;
+`;
+
 const SubTitle: StyledComponent<typeof Lead, object> = styled(Lead)`
   margin: 0;
 `;
@@ -25,7 +29,7 @@ function PageTitle ({lead, title}: IPageProps): FunctionComponentElement<IPagePr
       {
         lead &&
           <React.Fragment>
-            <Divider />
+            <Hr />
 
             <SubTitle text={lead} />
           </React.Fragment>
