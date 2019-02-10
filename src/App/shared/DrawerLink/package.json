@@ -1,0 +1,6 @@
+{
+  "name": "DrawerLink",
+  "main": "./DrawerLink.tsx",
+  "version": "0.0.0",
+  "private": true
+}
