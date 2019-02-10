@@ -33,6 +33,7 @@
     "no-multiline-string": false,
     "no-parameter-properties": false,
     "no-relative-imports": false,
+    "no-reserved-keywords": false,
     "no-stateless-class": false,
     "no-string-based-set-timeout": false,
     "no-submodule-imports": false,
