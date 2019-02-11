@@ -4,21 +4,17 @@ import styled, {css, StyledComponent} from 'styled-components';
 import Backdrop from '../Backdrop';
 import Divider from '../Divider';
 import Toolbar from '../Toolbar';
+import UnstyledList from '../UnstyledList';
 import IDrawerProps, {IDrawerElementProps} from './Drawer.props';
 
-const Hr: StyledComponent<typeof Divider, object> = styled(Divider)`
-  margin: 0;
-`;
-
-const List: StyledComponent<'hr', object> = styled.ul`
-  list-style: none;
-  padding-left: 0;
-`;
-
-const Overlay: StyledComponent<typeof Backdrop, object, IDrawerElementProps> = styled(Backdrop)<IDrawerElementProps>`
+const DrawerBackdrop: StyledComponent<typeof Backdrop, object, IDrawerElementProps> = styled(Backdrop)<IDrawerElementProps>`
   cursor: pointer;
   opacity: ${({visible}: IDrawerElementProps): string => visible ? '.5' : '0'};
   transition: opacity 225ms cubic-bezier(.4,0,.2,1);
+`;
+
+const DrawerDivider: StyledComponent<typeof Divider, object> = styled(Divider)`
+  margin: 0;
 `;
 
 const Panel: StyledComponent<'nav', object, IDrawerElementProps> = styled.nav<IDrawerElementProps>`
@@ -48,19 +44,18 @@ const Wrapper: StyledComponent<'div', object, IDrawerElementProps> = styled.div<
 `;
 
 function Drawer ({children, onClose, visible}: IDrawerProps): ReactPortal {
-  // TODO: Remove overlay and panel from the DOM
   return createPortal(
     <Wrapper visible={visible} role='presentation'>
-      <Overlay visible={visible} onClick={onClose} />
+      <DrawerBackdrop visible={visible} onClick={onClose} />
 
       <Panel visible={visible}>
         <Toolbar theme='secondary' title='Menu' />
 
-        <Hr />
+        <DrawerDivider />
 
-        <List>
+        <UnstyledList>
           {children}
-        </List>
+        </UnstyledList>
       </Panel>
     </Wrapper>,
     document.body

@@ -1,8 +1,10 @@
+import {faFutbol, faHome, faListOl, faListUl, faTshirt} from '@fortawesome/free-solid-svg-icons';
 import React, {Fragment, FunctionComponentElement, memo, useState} from 'react';
 import {connect, MapDispatchToPropsNonObject, MapStateToProps} from 'react-redux';
 import {Dispatch} from 'redux';
 import IAppState from '../../App.state';
 import Drawer from '../../shared/Drawer';
+import DrawerIcon from '../../shared/DrawerIcon';
 import DrawerLink from '../../shared/DrawerLink/DrawerLink';
 import Toolbar from '../../shared/Toolbar';
 import {closeDrawer, ICloseDrawer, IOpenDrawer, openDrawer} from './Navigation.actions';
@@ -60,10 +62,21 @@ function Navigation ({close, open, title, visible}: NavigationProps): FunctionCo
       {
         rendered &&
         <Drawer visible={visible} onClose={closeDrawerAction}>
-          <DrawerLink to='/home'>Home</DrawerLink>
-          <DrawerLink to='/my-predictions'>My predictions</DrawerLink>
-          <DrawerLink to='/results'>Results</DrawerLink>
-          <DrawerLink to='/standings'>Standings</DrawerLink>
+          <DrawerLink to='/home'>
+            <DrawerIcon icon={faHome} /> Home
+          </DrawerLink>
+          <DrawerLink to='/my-predictions'>
+            <DrawerIcon icon={faListUl} /> My predictions
+          </DrawerLink>
+          <DrawerLink to='/results'>
+            <DrawerIcon icon={faFutbol} /> Results
+          </DrawerLink>
+          <DrawerLink to='/standings'>
+            <DrawerIcon icon={faListOl} /> Standings
+          </DrawerLink>
+          <DrawerLink to='/teams'>
+            <DrawerIcon icon={faTshirt} /> Teams
+          </DrawerLink>
         </Drawer>
       }
     </Fragment>
