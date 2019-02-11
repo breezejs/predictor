@@ -1,4 +1,4 @@
-import React, {FunctionComponentElement, memo} from 'react';
+import React, {FunctionComponentElement} from 'react';
 import styled, {StyledComponent} from 'styled-components';
 import IPageProps from './Page.props';
 
@@ -19,4 +19,4 @@ function Page ({children, className}: IPageProps): FunctionComponentElement<IPag
   );
 }
 
-export default memo(Page);
+export default Page;

@@ -7,6 +7,7 @@ import IHamburgerProps from './Hamburger.props';
 const Button: StyledComponent<'button', object> = styled.button`
   background-color: transparent;
   border: 0;
+  cursor: pointer;
   font-size: 20px;
   height: 40px;
   line-height: 1;

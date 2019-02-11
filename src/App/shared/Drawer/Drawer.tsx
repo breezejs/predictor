@@ -53,7 +53,7 @@ function Drawer ({children, onClose, visible}: IDrawerProps): ReactPortal {
 
         <DrawerDivider />
 
-        <UnstyledList>
+        <UnstyledList onClick={onClose}>
           {children}
         </UnstyledList>
       </Panel>

@@ -30,7 +30,7 @@ const Link: StyledComponent<typeof NavLink, object> = styled(NavLink)
 function DrawerLink ({children, to}: IDrawerLinkProps): FunctionComponentElement<IDrawerLinkProps> {
   return (
     <li>
-      <Link to={to} activeClassName='active'>{children}</Link>
+      <Link exact to={to} activeClassName='active'>{children}</Link>
     </li>
   );
 }

@@ -62,7 +62,7 @@ function Navigation ({close, open, title, visible}: NavigationProps): FunctionCo
       {
         rendered &&
         <Drawer visible={visible} onClose={closeDrawerAction}>
-          <DrawerLink to='/home'>
+          <DrawerLink to='/'>
             <DrawerIcon icon={faHome} /> Home
           </DrawerLink>
           <DrawerLink to='/my-predictions'>
