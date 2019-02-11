@@ -1,4 +1,4 @@
-import React, {FunctionComponentElement, memo} from 'react';
+import React, {FunctionComponentElement} from 'react';
 import PageTitle from '../shared/PageTitle';
 
 function Teams (): FunctionComponentElement<null> {
@@ -7,4 +7,4 @@ function Teams (): FunctionComponentElement<null> {
   );
 }
 
-export default memo(Teams);
+export default Teams;

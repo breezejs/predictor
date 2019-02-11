@@ -1,4 +1,4 @@
-import React, {Fragment, FunctionComponentElement, memo} from 'react';
+import React, {Fragment, FunctionComponentElement} from 'react';
 import PageTitle from '../shared/PageTitle';
 
 function NotFound (): FunctionComponentElement<null> {
@@ -11,4 +11,4 @@ function NotFound (): FunctionComponentElement<null> {
   );
 }
 
-export default memo(NotFound);
+export default NotFound;
