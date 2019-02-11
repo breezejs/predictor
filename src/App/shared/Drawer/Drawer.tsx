@@ -20,6 +20,7 @@ const DrawerDivider: StyledComponent<typeof Divider, object> = styled(Divider)`
 const Panel: StyledComponent<'nav', object, IDrawerElementProps> = styled.nav<IDrawerElementProps>`
   background-color: #f8f9fa;
   bottom: 0;
+  box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
   left: ${({visible}: IDrawerElementProps): string => visible ? '0' : '-250px'};
   opacity: ${({visible}: IDrawerElementProps): string => visible ? '1' : '0'};
   position: fixed;
