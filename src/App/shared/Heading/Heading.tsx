@@ -2,17 +2,29 @@ import React, {Fragment, FunctionComponentElement, memo} from 'react';
 import styled, {StyledComponent} from 'styled-components';
 import {IHeadingProps} from './Heading.props';
 
-const H1: StyledComponent<'h1', object> = styled.h1``;
+const H1: StyledComponent<'h1', object> = styled.h1`
+  font-size: 2.5rem;
+`;
 
-const H2: StyledComponent<'h2', object> = styled.h2``;
+const H2: StyledComponent<'h2', object> = styled.h2`
+  font-size: 2rem;
+`;
 
-const H3: StyledComponent<'h3', object> = styled.h3``;
+const H3: StyledComponent<'h3', object> = styled.h3`
+  font-size: 1.75rem;
+`;
 
-const H4: StyledComponent<'h4', object> = styled.h4``;
+const H4: StyledComponent<'h4', object> = styled.h4`
+  font-size: 1.5rem;
+`;
 
-const H5: StyledComponent<'h5', object> = styled.h5``;
+const H5: StyledComponent<'h5', object> = styled.h5`
+  font-size: 1.25rem;
+`;
 
-const H6: StyledComponent<'h6', object> = styled.h6``;
+const H6: StyledComponent<'h6', object> = styled.h6`
+  font-size: 1rem;
+`;
 
 function Heading ({className, level, text}: IHeadingProps): FunctionComponentElement<IHeadingProps> {
   switch (level) {

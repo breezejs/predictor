@@ -1,6 +1,5 @@
 import {ConnectedRouter} from 'connected-react-router';
 import React, {Fragment, FunctionComponentElement, memo} from 'react';
-import DocumentTitle from 'react-document-title';
 import {Provider} from 'react-redux';
 import {AppHistory} from './App.history';
 import AppRouting from './App.routing';
@@ -17,9 +16,7 @@ function App (): FunctionComponentElement<null> {
           <Navigation title='Predictor' />
 
           <Page>
-            <DocumentTitle title='Predictor'>
-              <AppRouting />
-            </DocumentTitle>
+            <AppRouting />
           </Page>
 
           <Footer name='BreezeJS' />
