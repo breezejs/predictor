@@ -1,6 +1,6 @@
 import React, {FunctionComponentElement, memo} from 'react';
-import {default as styled, StyledComponent} from 'styled-components';
-import IFooterProps from './Footer.props';
+import styled, {StyledComponent} from 'styled-components';
+import {IFooterProps} from './Footer.props';
 
 const Small: StyledComponent<'small', object> = styled.small`
   color: #6c757d;

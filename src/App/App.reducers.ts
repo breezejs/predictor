@@ -1,8 +1,8 @@
 import {connectRouter} from 'connected-react-router';
 import {History} from 'history';
 import {combineReducers, Reducer} from 'redux';
-import IAppState from './App.state';
-import navigationReducer from './core/Navigation/Navigation.reducer';
+import {IAppState} from './App.state';
+import {navigationReducer} from './core/Navigation';
 
 const AppReducers: Function = (history: History): Reducer<IAppState> => combineReducers({
   navigation: navigationReducer,

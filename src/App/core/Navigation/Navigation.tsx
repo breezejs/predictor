@@ -2,13 +2,13 @@ import {faFutbol, faHome, faListOl, faListUl, faTshirt} from '@fortawesome/free-
 import React, {Fragment, FunctionComponentElement, memo, useState} from 'react';
 import {connect, MapDispatchToPropsNonObject, MapStateToProps} from 'react-redux';
 import {Dispatch} from 'redux';
-import IAppState from '../../App.state';
+import {IAppState} from '../../App.state';
 import Drawer from '../../shared/Drawer';
 import DrawerIcon from '../../shared/DrawerIcon';
 import DrawerLink from '../../shared/DrawerLink/DrawerLink';
 import Toolbar from '../../shared/Toolbar';
 import {closeDrawer, ICloseDrawer, IOpenDrawer, openDrawer} from './Navigation.actions';
-import NavigationProps, {INavigationDispatchProps, INavigationOwnProps, INavigationStateProps} from './Navigation.props';
+import {INavigationDispatchProps, INavigationOwnProps, INavigationStateProps, NavigationProps} from './Navigation.props';
 
 const mapStateToProps: MapStateToProps<INavigationStateProps, INavigationOwnProps, IAppState> =
   ({navigation: {visible}}: IAppState): INavigationStateProps => ({

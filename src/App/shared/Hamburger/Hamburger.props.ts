@@ -1,4 +1,4 @@
-export default interface IHamburgerProps {
+export interface IHamburgerProps {
   className?: string;
   label: string;
   onClick: (() => void);

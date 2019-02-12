@@ -5,7 +5,7 @@ import Backdrop from '../Backdrop';
 import Divider from '../Divider';
 import Toolbar from '../Toolbar';
 import UnstyledList from '../UnstyledList';
-import IDrawerProps, {IDrawerElementProps} from './Drawer.props';
+import {IDrawerElementProps, IDrawerProps} from './Drawer.props';
 
 const DrawerBackdrop: StyledComponent<typeof Backdrop, object, IDrawerElementProps> = styled(Backdrop)<IDrawerElementProps>`
   cursor: pointer;

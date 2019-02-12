@@ -1,4 +1,4 @@
-export default interface IPageTitleProps {
+export interface IPageTitleProps {
   lead?: string;
   title: string;
 }

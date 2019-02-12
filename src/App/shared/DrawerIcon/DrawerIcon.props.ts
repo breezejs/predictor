@@ -1,5 +1,5 @@
 import {IconProp} from '@fortawesome/fontawesome-svg-core';
 
-export default interface IDrawerIconProps {
+export interface IDrawerIconProps {
   icon: IconProp;
 }

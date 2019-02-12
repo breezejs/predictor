@@ -1,7 +1,7 @@
 import React, {FunctionComponentElement, memo} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled, {StyledComponent} from 'styled-components';
-import IDrawerLinkProps from './DrawerLink.props';
+import {IDrawerLinkProps} from './DrawerLink.props';
 
 const Link: StyledComponent<typeof NavLink, object> = styled(NavLink)
   .attrs({

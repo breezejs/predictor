@@ -1,6 +1,6 @@
-import React, {FunctionComponentElement, memo} from 'react';
+import React, {Fragment, FunctionComponentElement, memo} from 'react';
 import styled, {StyledComponent} from 'styled-components';
-import IHeadingProps from './Heading.props';
+import {IHeadingProps} from './Heading.props';
 
 const H1: StyledComponent<'h1', object> = styled.h1``;
 
@@ -42,7 +42,7 @@ function Heading ({className, level, text}: IHeadingProps): FunctionComponentEle
     );
   default:
     return (
-      <React.Fragment>{text}</React.Fragment>
+      <Fragment>{text}</Fragment>
     );
   }
 }

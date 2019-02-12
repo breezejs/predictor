@@ -1,6 +1,6 @@
 import React, {FunctionComponentElement, memo} from 'react';
 import styled, {StyledComponent} from 'styled-components';
-import ILeadProps from './Lead.props';
+import {ILeadProps} from './Lead.props';
 
 const P: StyledComponent<'p', object> = styled.p`
   font-size: 1.25rem;

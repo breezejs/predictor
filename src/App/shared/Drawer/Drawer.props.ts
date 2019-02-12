@@ -4,7 +4,7 @@ export interface IDrawerElementProps {
   visible: boolean;
 }
 
-export default interface IDrawerProps {
+export interface IDrawerProps {
   children: ReactNode;
   onClose: (() => void);
   visible: boolean;

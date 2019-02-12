@@ -11,6 +11,4 @@ export interface INavigationStateProps {
   visible: boolean;
 }
 
-type NavigationProps = INavigationStateProps & INavigationOwnProps & INavigationDispatchProps;
-
-export default NavigationProps;
+export type NavigationProps = INavigationStateProps & INavigationOwnProps & INavigationDispatchProps;

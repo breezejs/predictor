@@ -6,7 +6,7 @@ export type HeadingTypes =
   | 'h5'
   | 'h6';
 
-export default interface IHeadingProps {
+export interface IHeadingProps {
   className?: string;
   level: HeadingTypes;
   text: string;

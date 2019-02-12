@@ -1,11 +1,11 @@
 import {NavigationActions, NavigationActionTypes} from './Navigation.actions';
-import INavigationState from './Navigation.state';
+import {INavigationState} from './Navigation.state';
 
 export const initialState: INavigationState = {
   visible: false
 };
 
-export default function navigationReducer (state: INavigationState = initialState, {type}: NavigationActions): INavigationState {
+export function navigationReducer (state: INavigationState = initialState, {type}: NavigationActions): INavigationState {
   switch (type) {
   case NavigationActionTypes.CloseDrawer:
     return {

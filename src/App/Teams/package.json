@@ -1,6 +1,0 @@
-{
-  "name": "Teams",
-  "main": "./Teams.tsx",
-  "version": "0.0.0",
-  "private": true
-}

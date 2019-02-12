@@ -1,6 +1,6 @@
 import React, {FunctionComponentElement} from 'react';
 import styled, {StyledComponent} from 'styled-components';
-import IPageProps from './Page.props';
+import {IPageProps} from './Page.props';
 
 const Wrapper: StyledComponent<'div', object> = styled.div`
   background-color: #ffff;

@@ -1,4 +1,4 @@
-export default interface ILeadProps {
+export interface ILeadProps {
   className?: string;
   text: string;
 }

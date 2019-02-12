@@ -2,7 +2,7 @@ import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React, {FunctionComponentElement, memo} from 'react';
 import styled, {StyledComponent} from 'styled-components';
-import IHamburgerProps from './Hamburger.props';
+import {IHamburgerProps} from './Hamburger.props';
 
 const Button: StyledComponent<'button', object> = styled.button`
   background-color: transparent;

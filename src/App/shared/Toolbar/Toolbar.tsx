@@ -2,7 +2,7 @@ import React, {FunctionComponentElement, memo} from 'react';
 import styled, {StyledComponent} from 'styled-components';
 import Hamburger from '../Hamburger';
 import Heading from '../Heading';
-import IToolbarProps, {IToolbarElementProps} from './Toolbar.props';
+import {IToolbarElementProps, IToolbarProps} from './Toolbar.props';
 
 const Header: StyledComponent<'header', object, IToolbarElementProps> = styled('header')<IToolbarElementProps>`
   align-items: center;

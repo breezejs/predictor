@@ -1,3 +1,3 @@
-export default interface INavigationState {
+export interface INavigationState {
   visible: boolean;
 }

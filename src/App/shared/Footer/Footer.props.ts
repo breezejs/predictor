@@ -1,4 +1,4 @@
-export default interface IFooterProps {
+export interface IFooterProps {
   className?: string;
   name: string;
 }
