@@ -38,6 +38,28 @@ jobs:
           command: npm run test:ci
           name: Unit test
 
+  sonarqube:
+    docker:
+      - image: circleci/node:8.10.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - breeze-predictor-dependencies-{{ checksum "package.json" }}
+            - breeze-predictor-dependencies-
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          command: |
+            wget -q https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
+            unzip sonar-scanner-cli-3.2.0.1227-linux.zip
+            sudo mv sonar-scanner-3.2.0.1227-linux /var/opt
+          name: Install Sonar Scanner
+      - run:
+          command: sonar-scanner -Dsonar.projectKey=breezejs_predictor -Dsonar.organization=breezejs -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io Dsonar.login=$SONAR_LOGIN
+          name: Static code analysis
+
   build:
     docker:
       - image: circleci/node:8.10.0
@@ -60,6 +82,9 @@ workflows:
   test-and-build:
     jobs:
       - setup
+      - sonarqube:
+          requires:
+            - setup
       - unit-test:
           requires:
             - setup
