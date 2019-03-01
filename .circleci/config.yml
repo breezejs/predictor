@@ -42,6 +42,8 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk-browsers
     working_directory: ~/repo
+    environment:
+      BASH_ENV: ~/.bashrc
     steps:
       - checkout
       - restore_cache:
@@ -55,6 +57,7 @@ jobs:
             wget -q https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
             unzip sonar-scanner-cli-3.3.0.1492-linux.zip
             sudo mv sonar-scanner-3.3.0.1492-linux /var/opt
+            echo 'export PATH=/var/opt/sonar-scanner-3.3.0.1492-linux/bin:$PATH' >> $BASH_ENV
           name: Install Sonar Scanner
       - run:
           command: sonar-scanner -Dsonar.projectKey=breezejs_predictor -Dsonar.organization=breezejs -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io Dsonar.login=$SONAR_LOGIN
