@@ -58,7 +58,7 @@ jobs:
             echo 'export PATH=/var/opt/sonar-scanner-3.3.0.1492-linux/bin:$PATH' >> $BASH_ENV
           name: Install Sonar Scanner
       - run:
-          command: sonar-scanner -Dsonar.projectKey=breezejs_predictor -Dsonar.organization=breezejs -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io Dsonar.login=$SONAR_LOGIN
+          command: sonar-scanner -Dsonar.projectKey=breezejs_predictor -Dsonar.organization=breezejs -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_LOGIN
           name: Static code analysis
 
   build:
