@@ -42,8 +42,6 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk-browsers
     working_directory: ~/repo
-    environment:
-      BASH_ENV: ~/.bashrc
     steps:
       - checkout
       - restore_cache:
