@@ -38,6 +38,22 @@ jobs:
           command: npm run test:ci
           name: Unit test
 
+  sonarqube:
+    docker:
+      - image: breezejs/sonar-scanner:latest
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - breeze-predictor-dependencies-{{ checksum "package.json" }}
+            - breeze-predictor-dependencies-
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          command: sonar-scanner -Dsonar.projectKey=breezejs_predictor -Dsonar.organization=breezejs -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_LOGIN
+          name: Static code analysis
+
   build:
     docker:
       - image: circleci/node:8.10.0
@@ -60,6 +76,9 @@ workflows:
   test-and-build:
     jobs:
       - setup
+      - sonarqube:
+          requires:
+            - setup
       - unit-test:
           requires:
             - setup
